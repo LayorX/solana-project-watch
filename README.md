@@ -68,6 +68,23 @@ uv run streamlit run app.py
 
 ---
 
+## 🌍 Share with the World (Ngrok) / 一鍵對外分享
+Want to share your dashboard with friends or access it remotely? Use our built-in sharing script:
+想與朋友分享你的儀表板，或在遠端存取？使用我們內建的分享腳本：
+
+1. Get your **Authtoken** from [ngrok.com](https://dashboard.ngrok.com/get-started/your-authtoken).
+2. Authenticate ngrok (only need to do once):
+   ```bash
+   uv run ngrok config add-authtoken <YOUR_TOKEN>
+   ```
+3. Run the one-click share script:
+   ```bash
+   uv run share.py
+   ```
+It will automatically launch both **Streamlit** and an **Ngrok tunnel**, providing you with a public URL (e.g., `https://xxxx.ngrok-free.app`).
+
+---
+
 ## 🤖 Telegram Setup / Telegram 設定指南
 1. Find [@BotFather](https://t.me/botfather) on TG to create a bot and get your **Token**.
 2. Find [@userinfobot](https://t.me/userinfobot) to get your **Chat ID**.
